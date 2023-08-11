@@ -36,7 +36,7 @@ pipeline {
                         def ansibleCommand = 'ansible-playbook'
 
                         // Dynamic Inventory Script
-                        sh "${ansibleCommand} -i ../terraform_inventory.py playbook.yml"
+                        sh "${ansibleCommand} -i ${WORKSPACE}/terraform_inventory.py playbook.yml"
                     }
                 
             }
